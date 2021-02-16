@@ -23,7 +23,7 @@
 		</div>
 		<div v-if="modal" @click.self="modal = false" class="modal">
 			<div class="content">
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia delectus quasi illo debitis et esse magni amet ipsam, quis dolor pariatur, maiores tempore velit natus beatae quas consequuntur voluptas rem.
+				<h3>Edit Profile</h3>
 			</div>
 		</div>
 	</div>	
