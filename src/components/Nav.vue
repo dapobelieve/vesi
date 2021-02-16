@@ -111,7 +111,7 @@ export default {
     				border-bottom: 1px solid #f9826c;
     				color: var(--text-primary);
     				span {
-    					margin-left: 8px
+    					margin-left: 8px;
     				}
     			}
     			>* {
@@ -122,12 +122,12 @@ export default {
     				font-weight: 600;
     				
     				svg {
-    					margin-right: 8px
+    					margin-right: 8px;
     				}
     			}
 
     			 & > *:not(:last-child) {
-    				margin-right: 4em
+    				margin-right: 4em;
     			}
     		}
     	}
