@@ -75,6 +75,7 @@ export default {
 			flex-grow: 1;
 		}
 		.menu {
+			justify-content: center;
 			& > *:not(:last-child) {
 				margin-right: 4em;
 			}

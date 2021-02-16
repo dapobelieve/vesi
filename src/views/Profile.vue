@@ -133,6 +133,7 @@ export default {
 		padding: 10px 10px;
 		display: flex;
 		margin-top: 8rem;
+		border: 1px solid lightgrey;
 	}
 }
 
