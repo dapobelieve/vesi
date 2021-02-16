@@ -1,5 +1,5 @@
 <template>
-	<nav>
+	<nav class="app-nav">
 		<div class="container">
 			<div class="nav">
 				<div class="left">
@@ -65,7 +65,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @media (min-width: 768px) {
-	nav {
+	.app-nav {
 		width: 100%;
 		padding-top: 2.5em;
 		border-bottom: 1px solid var(--border-color);
