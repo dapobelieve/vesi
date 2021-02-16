@@ -63,7 +63,7 @@ export default {
 	}
 }	
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @media (min-width: 768px) {
 	nav {
 		width: 100%;
