@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<AppNav	:repoCount="repos.length" />
-		
+
 		<div class="container">
 			<AppDetails />
 			<div class="content">
@@ -20,7 +20,6 @@
 					<AppCard :repo="repo" />
 					<div class="divider"></div>
 				</div>
-				
 			</div>
 		</div>
 	</div>	
@@ -32,6 +31,7 @@ import AppFilter from "@/components/Filter";
 import AppDetails from "@/components/ProfileDetails";
 import AppCard from "@/components/RepoCard"
 import AppButton from "@/components/Button"
+
 export default {
 	data () {
 		return {
@@ -88,7 +88,7 @@ export default {
 		let res = await Api.get(`https://api.github.com/users/dapobelieve/repos?per_page=100`)
 		this.repos = res.data
 	}
-}	
+}
 </script>
 <style lang="scss">
 .container {

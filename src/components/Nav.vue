@@ -1,6 +1,6 @@
 <template>
 	<div class="app-nav">
-		<div class="container">
+		<div class="">
 			<div class="nav">
 				<div class="left">
 					<div class="image">
