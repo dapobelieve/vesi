@@ -1,5 +1,5 @@
 <template>
-	<nav class="app-nav">
+	<div class="app-nav">
 		<div class="container">
 			<div class="nav">
 				<div class="left">
@@ -23,7 +23,7 @@
 				
 			</div>
 		</div>
-	</nav>
+	</div>
 </template>
 <script>
 import Repo from "@/assets/repo"	

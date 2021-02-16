@@ -1,8 +1,7 @@
 <template>
 	<div>
-		<AppNav
-		v-if="repos"
-		:repoCount="repos.length" />
+		<AppNav	:repoCount="repos.length" />
+		
 		<div class="container">
 			<AppDetails />
 			<div class="content">
@@ -68,7 +67,6 @@ export default {
 		        });
 		      });
 				}else if(this.langSelect.length > 0) {
-					console.log("data...")
 					data = this.repos.filter(row => {
 						return Object.keys(row).some(key => {
 								if(row['language']) {
@@ -76,7 +74,6 @@ export default {
 										String(row['language']).toLowerCase().indexOf(this.langSelect.toLowerCase()) > -1
 									)
 								}
-								// 
 						})
 					})
 				}else {
