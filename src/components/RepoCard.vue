@@ -53,10 +53,19 @@ export default {
 
 @media (min-width: 768px) {
 	.repo-card {
+		padding-right: 8px;
+		padding-left: 8px;
+	}
+}
+	.repo-card {
 		width: 100%;
 		display: flex;
 		padding-top: 24px;
 		padding-bottom: 24px;
+		// padding-right: 2px;
+		// padding-left: 2px;
+		
+		
 
 		.left {
 			width: 75%;
@@ -110,5 +119,5 @@ export default {
 	    }
 	  }
 	}
-}
+// }
 </style>

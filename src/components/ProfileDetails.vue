@@ -3,7 +3,7 @@
 		<div class="avatar">
 			<a>
 				<img src="https://avatars.githubusercontent.com/u/15062380?s=460&u=2f400d9555dc07bc4d2c2d25483ddba570fef29b&v=4" alt="">
-				<div @click.self="" >🎯 Edit Status</div>
+				<div @click.self="$emit('edit')" >🎯 Edit Status</div>
 			</a>			
 		</div>
 		<div class="info">
@@ -47,9 +47,9 @@ export default {
 </script>
 <style lang="scss">
 
-.details {
-	width: 100%;
-}
+// .details {
+// 	width: 100%;
+// }
 
 
 @media (min-width: 768px) {
@@ -57,12 +57,11 @@ export default {
 		width: 25%;
 		margin-left: 12px;
 		margin-right: 12px;
-		margin-top: 12px;
 
 		.avatar {
-			height: 280px;
-			width: 280px;
-			
+			height: 280px !important;
+			width: 280px !important;
+
 			a {
 				position: relative;
 
@@ -90,83 +89,121 @@ export default {
 				object-fit: cover;
 			}
 		}
-
-		.info {
-			margin-top: 1rem;
-			margin-bottom: 1rem;
-
-			* {
-				display: block;
-			}
-
-			>:first-child {
-				font-size: 1.5rem;
-				font-weight: 600;
-				margin-bottom: 0px;
-				color: var(--text-primary);
-			}
-
-			>:nth-child(2) {
-				font-size: 1.2rem;
-				font-weight: lighter;
-				font-family: sans-serif;
-				margin-bottom: 0.9rem;
-			}
-
-			.status {
-				margin-bottom: 2rem;
-				color: var(--text-primary);
-			}
-
-			>:last-child {
-				margin-top: 24px;
-				display: flex;
-				width: 100%;
-				justify-content: space-around;
-				a {
-					&:hover {
-						text-decoration: none
-					}
-				}
-			}
-		}
-
-		.about {
-			margin-bottom: 1rem;
-
-			>* {
-				display: block;				
-			}
-			.company {
-				font-weight: 600;
-				color: var(--text-primary);
-				margin-bottom: 8px
-			}
-
-			.links {
-				margin-bottom: 10px;
-				a {
-					color: var(--text-secondary);
-				}
-			}
-		}
-
-		.highlights {
-			margin-top: 1.5rem;
-			margin-bottom: 1.5rem;
-			>* {
-				display: block
-			}
-			:first-child {
-				font-weight: 600;
-				color: var(--text-primary);
-				margin-bottom: 1rem
-			};
-			div {
-				margin-top: 1rem;
-				display: inline-block
-			};
-		}
 	}
 }
+
+.details {
+	
+	margin-top: 12px;
+
+	.avatar {
+		height: 150px;
+		width: 150px;
+		
+		a {
+			position: relative;
+
+			div {
+				border: 1px solid var(--btn-bg-color);
+				position: absolute;
+				bottom: 4rem;
+				right: -41px	;
+				border-radius: 2em;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 10px;
+				cursor: pointer;
+				padding: 8px;
+				box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+				background-color: #fff
+			}
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+	}
+
+	.info {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+
+		* {
+			display: block;
+		}
+
+		>:first-child {
+			font-size: 1.5rem;
+			font-weight: 600;
+			margin-bottom: 0px;
+			color: var(--text-primary);
+		}
+
+		>:nth-child(2) {
+			font-size: 1.2rem;
+			font-weight: lighter;
+			font-family: sans-serif;
+			margin-bottom: 0.9rem;
+		}
+
+		.status {
+			margin-bottom: 2rem;
+			color: var(--text-primary);
+		}
+
+		>:last-child {
+			margin-top: 24px;
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+			a {
+				&:hover {
+					text-decoration: none
+				}
+			}
+		}
+	}
+
+	.about {
+		margin-bottom: 1rem;
+
+		>* {
+			display: block;				
+		}
+		.company {
+			font-weight: 600;
+			color: var(--text-primary);
+			margin-bottom: 8px
+		}
+
+		.links {
+			margin-bottom: 10px;
+			a {
+				color: var(--text-secondary);
+			}
+		}
+	}
+
+	.highlights {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		>* {
+			display: block
+		}
+		:first-child {
+			font-weight: 600;
+			color: var(--text-primary);
+			margin-bottom: 1rem
+		};
+		div {
+			margin-top: 1rem;
+			display: inline-block
+		};
+	}
+}
+// }
 </style>

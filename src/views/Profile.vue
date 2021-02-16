@@ -1,9 +1,8 @@
 <template>
-	<div>
+	<div style="position: relative">
 		<AppNav	:repoCount="repos.length" />
-
 		<div class="container">
-			<AppDetails />
+			<AppDetails @edit="modal = true" />
 			<div class="content">
 				<div>
 					<AppFilter
@@ -22,6 +21,11 @@
 				</div>
 			</div>
 		</div>
+		<div v-if="modal" @click.self="modal = false" class="modal">
+			<div class="content">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia delectus quasi illo debitis et esse magni amet ipsam, quis dolor pariatur, maiores tempore velit natus beatae quas consequuntur voluptas rem.
+			</div>
+		</div>
 	</div>	
 </template>
 <script>
@@ -35,10 +39,21 @@ import AppButton from "@/components/Button"
 export default {
 	data () {
 		return {
+			modal: false,
 			search: "",
 			langSelect: "",
 			repos: null
 		}
+	},
+	watch: {
+		modal(newVal) {
+			let body = document.body
+      if (newVal == true) {
+        body.classList.add('modal-open');
+      }else {
+        body.classList.remove('modal-open');
+      }
+    }
 	},
 	components: {
 		AppNav,
@@ -54,6 +69,7 @@ export default {
 		},
 		filteredData() {
 			if(this.repos) {
+				if(this.langSelect == 'All') return this.repos
 				let data
 
 				if(this.search !== "") {
@@ -99,6 +115,26 @@ export default {
 	flex-shrink: 0;
 }	
 
+.modal {
+	position: absolute;
+	background: rgba(0,0,0,.5);
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+
+	.content {
+		max-width: 400px;
+		background-color: var(--bg-color);
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 6px;
+		padding: 10px 10px;
+		display: flex;
+		margin-top: 8rem;
+	}
+}
 
 @media (min-width: 768px) {
 	.container {
@@ -110,7 +146,7 @@ export default {
 	.content {
 		width: 75%;
 		margin-left: 12px;
-		margin-right: 12px
+		margin-right: 12px;
 	}
 }
 </style>
