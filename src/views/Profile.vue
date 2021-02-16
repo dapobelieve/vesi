@@ -90,7 +90,7 @@ export default {
 	}
 }
 </script>
-<style lang="scss">
+<style lang="scss" >
 .container {
 	max-width: 1280px;
 	margin-right: auto;
@@ -98,6 +98,7 @@ export default {
 	flex-direction: column;
 	flex-shrink: 0;
 }	
+
 
 @media (min-width: 768px) {
 	.container {

@@ -1,6 +1,6 @@
 <template>
-	<div class="app-nav">
-		<div class="">
+	<nav>
+		<div class="container">
 			<div class="nav">
 				<div class="left">
 					<div class="image">
@@ -23,7 +23,7 @@
 				
 			</div>
 		</div>
-	</div>
+	</nav>
 </template>
 <script>
 import Repo from "@/assets/repo"	
@@ -65,7 +65,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @media (min-width: 768px) {
-	.app-nav {
+	nav {
 		width: 100%;
 		padding-top: 2.5em;
 		border-bottom: 1px solid var(--border-color);
@@ -136,6 +136,6 @@ export default {
 		> div {
 			align-items: flex-end;
 		}
-	}	
+}
 }
 </style>
